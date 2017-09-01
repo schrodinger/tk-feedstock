@@ -1,4 +1,4 @@
-{% set version = "8.6.6" %}
+{% set version = "8.6.7" %}
 {% set maj_min = ".".join(version.split(".")[:2]) %}
 
 {% set VC_VERSION = os.environ.get('VC_VERSION', '9')|string %}
@@ -14,7 +14,7 @@ source:
     folder: tk{{ version }}
 
 build:
-  number: 6
+  number: 1
   detect_binary_files_with_prefix: true
   features:
     - vc{{ VC_VERSION }}   # [win]
