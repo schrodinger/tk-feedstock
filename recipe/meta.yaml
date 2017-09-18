@@ -18,6 +18,8 @@ source:
 build:
   number: 1
   detect_binary_files_with_prefix: true
+  features:
+    - vc{{ vc }}  # [win]
 
 requirements:
   build:
