@@ -27,6 +27,8 @@ requirements:
     - {{ cdt('libx11-devel') }}          # [linux]
     - {{ cdt('libxcb') }}                # [linux]
     - {{ cdt('libxau') }}                # [linux]
+  host:
+    - zlib  # [unix]
 
 test:
 
