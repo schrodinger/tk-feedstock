@@ -21,8 +21,14 @@ pushd tk${PKG_VERSION}/unix
   ./configure --prefix="${PREFIX}"        \
               --host=${HOST}              \
               --with-tcl="${PREFIX}"/lib  \
-              --enable-aqua=yes           \
+              --enable-aqua=no            \
+              --with-x                    \
+              --disable-corefoundation    \
               ${ARCH_FLAG}
+
+  # fix
+  sed -i.bak "s#^DYLIB_INSTALL_DIR.*#DYLIB_INSTALL_DIR = ${PREFIX}/lib#" Makefile
+
   make -j${CPU_COUNT} ${VERBOSE_AT}
   make install
 popd
