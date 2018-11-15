@@ -12,9 +12,6 @@ source:
   - url: https://downloads.sourceforge.net/tcl/tk{{ version }}-src.tar.gz
     folder: tk{{ version }}
     sha256: 49e7bca08dde95195a27f594f7c850b088be357a7c7096e44e1158c7a5fd7b33
-    patches:
-      # https://trac.macports.org/ticket/55649
-      - patch-macosx-tkMacOSXXStubs.c.diff  # [osx]
 
 build:
   number: 2000 # higher than conda-forge
