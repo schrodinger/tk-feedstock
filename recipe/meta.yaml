@@ -17,15 +17,12 @@ source:
       - patch-macosx-tkMacOSXXStubs.c.diff  # [osx]
 
 build:
-  number: 0
+  number: 2000 # higher than conda-forge
+  string: x11tk0_2000
   detect_binary_files_with_prefix: true
   run_exports:
     # pin to major.minor because library names have that info in them
     - {{ pin_subpackage('tk', max_pin='x.x') }}
-  features:
-    - x11tk   [osx]
-  track_features:
-    - x11tk   [osx]
 
 requirements:
   build:
